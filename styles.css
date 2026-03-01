@@ -1,7 +1,12 @@
-/* CSS BY YOUR NAME */
+/* CSS BY Shereef Younis */
+
+
 
 /* IMPORTED FONTS*/
-/* IMPORT "INTER" FROM GOOGLE FONTS"
+/* IMPORT "INTER" FROM GOOGLE FONTS" */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); 
+
+
 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -52,6 +57,8 @@ table {
     border-spacing: 0;
 }
 
+
+
 /* ROOT VARIABLES */
 :root {
     --blue: #007BFF;
@@ -61,6 +68,8 @@ table {
     --charcoal: #333333;
     --font: "Inter", sans-serif;
 }
+
+
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 
