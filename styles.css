@@ -74,6 +74,39 @@ table {
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+/* Body Section */
+body {
+    min-width: 400px;
+    font-family: var(--font);
+}
+
+/* Header Section */
+header {
+    color: var(--blue);
+    background: var(--black);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+header h1 {
+    grid-column: 1/3;
+}
+
+/* Navigation Section */
+nav {
+    grid-column: 3/3;
+}
+
+nav h2 {
+    visibility: hidden;
+    height: 1px;
+}
+
+nav a {
+    color: var(--blue);
+    text-decoration: none;
+}
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
