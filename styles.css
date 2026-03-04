@@ -76,11 +76,71 @@ table {
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
 
+
 /* Body Section */
 body {
     min-width: 400px;
     font-family: var(--font);
 }
+
+
+/* Header Section */
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1rem 0;
+    background-color: var(--black);
+    border-bottom: 2px solid var(--blue);
+    box-shadow: 0 2px 10px var(--blue);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--blue);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+nav h2 {
+    position: absolute;
+    visibility: hidden;
+    height: 1px;
+}
+
+nav ul {
+    display: none;
+}
+
+nav::after {
+    content: "";
+    display: block;
+    width: 1.75rem;
+    height: 2px;
+    background-color: var(--white);
+    box-shadow: 
+        0 8px 0 var(--white),
+        0 16px 0 var(--white);
+    cursor: pointer;
+}
+
+
 
 /* Hero Section */
 #hero h2 {
@@ -116,6 +176,8 @@ body {
     text-decoration: none;
 }
 
+
+
 /* About Section */
 #about h2 {
     color: var(--black);
@@ -130,6 +192,8 @@ body {
     line-height: 1.25;
     font-weight: 500;
 }
+
+
 
 /* Services Section */
 #services {
@@ -164,6 +228,8 @@ body {
     margin-bottom: 2rem;
     border-radius: 10px;
 }
+
+
 
 /* Results Section */
 #results {
@@ -232,6 +298,103 @@ table tr:nth-child(odd) {
 }
 
 
+
+/* Contact Section */
+#contact {
+    background-color: var(--black);
+    padding: 2.5rem 0;
+}
+
+#contact h2 {
+    color: var(--white);
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 1.5rem;
+}
+
+#contact p {
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    padding-bottom: 2rem;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact label {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--blue);
+    font-size: 1rem;
+    font-family: var(--font);
+    background-color: var(--white);
+    color: var(--black);
+    box-sizing: border-box;
+}
+
+#contact textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#contact button {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Footer Section */
+footer {
+    background-color: var(--black);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    color: var(--white);
+    font-size: 1.20rem;
+    line-height: 1.5;
+}
+
+footer a {
+    color: var(--blue);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    margin-left: 0.25rem;
+}
+
+footer a[href^="tel:"] {
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
@@ -281,7 +444,7 @@ table tr:nth-child(odd) {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: height 1s ease-in-out;
+    transition: height 1s ease;
     height: 0;
 }
 
