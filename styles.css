@@ -116,7 +116,7 @@ nav a {
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- {
+ #hero {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vaanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
