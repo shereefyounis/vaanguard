@@ -168,6 +168,7 @@ body {
 /* Results Section */
 #results {
     background-color: var(--blue);
+    padding-bottom: 1.5rem;
 }
 
 #results h2 {
@@ -179,10 +180,57 @@ body {
 
 #results p {
     color: var(--white);
-    font-size: 1.25rem;
+    font-size: 1.20rem;
     line-height: 1.5;
     font-weight: 500;
 }
+
+/* Results Section (Profits) */
+#results h3 {
+    color: var(--white);
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    margin: 1.5rem 1.5rem 2.5rem 1.5rem;
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 1rem auto 2rem auto;
+    border-collapse: collapse;
+    overflow: hidden;
+    background-color: var(--charcoal);
+}
+
+/* Table Header Styles */
+table th {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+    border: 2px solid var(--charcoal);
+    background-color: var(--black);
+}
+
+/* Table Row Styles */
+table td {
+    color: var(--white);
+    font-size: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--charcoal);
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: var(--black);
+}
+
+table tr:nth-child(odd) {
+    background-color: var(--charcoal);
+}
+
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
