@@ -74,39 +74,66 @@ table {
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+
+
 /* Body Section */
 body {
     min-width: 400px;
     font-family: var(--font);
 }
 
-/* Header Section */
-header {
-    color: var(--blue);
-    background: var(--black);
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+/* Hero Section */
+#hero h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
 }
 
-header h1 {
-    grid-column: 1/3;
+#hero p {
+    color: var(--white);
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    line-height: 1.5;
 }
 
-/* Navigation Section */
-nav {
-    grid-column: 3/3;
+#hero div {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(20px);
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
 }
 
-nav h2 {
-    visibility: hidden;
-    height: 1px;
-}
-
-nav a {
-    color: var(--blue);
+.button {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1.25rem 1.25rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
     text-decoration: none;
 }
+
+/* About Section */
+#about h2 {
+    color: var(--black);
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin: 2rem 1.5rem 2rem 1.5rem;
+}
+
+#about p {
+    color: var(--black);
+    font-size: 1.25rem;
+    line-height: 1.25;
+    font-weight: 500;
+}
+
+/* Services Section */
+
+
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
@@ -127,7 +154,7 @@ nav a {
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
+ header h1::before {
     content: "";
 
     left:-.5rem;
@@ -136,6 +163,7 @@ nav a {
     background: url('images/vaanguard-logo.svg') no-repeat center/contain;
 
 }
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
@@ -149,15 +177,17 @@ nav a {
     padding: 1rem;
     position: relative;
 }
+
 /* ADD ON TRANSITION ON HEIGHT */
 .bar {
     width: 50px;
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: height 1s ease-in-out;
     height: 0;
 }
+
 /* THIS ONE IS DONE FOR YOU */
 .bar::after {
     content: attr(data-year);
@@ -169,6 +199,7 @@ nav a {
     font-weight: bold;
     color: var(--white);
 }
+
 @keyframes stepUp {
     0% {
         height: 0;
@@ -177,6 +208,7 @@ nav a {
         height: var(--height);
     }
 }
+
 /* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
 .bar {
     animation: stepUp 1s ease-in-out forwards;
